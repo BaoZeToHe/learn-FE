@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="login_28_2.css">
+  <link>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="form_Registration">
+    <div class="header_Registration">
+      <h3>Registration From</h3>
+    </div>
+    <div class="input_Registration">
+      <div>
+        <input id="first_name" type="text" placeholder="First name">
+        <span class="first_name check"> </span>
+      </div>
+      <div>
+        <input id="last_name" type="text" placeholder="Last name">
+        <span class="last_name check"> </span>
+      </div>
+      <div>
+        <input id="email" type="text" placeholder="Email">
+        <span class="email check"> </span>
+      </div>
+      <div>
+        <input type="password" id="password" placeholder="Password">
+        <span class="password check"> </span>
+      </div>
+    </div>
+    <div class="check_box_Registration">
+      <div class="check_box_Registration_child">
+        <input type="checkbox">
+        <label>Lorem ipsum dolor sit amet consectetuer adipiscing elit. sed diam nonummy nibh euismod tincidunt ut
+          laoreet</label>
+      </div>
+      <div class="check_box_Registration_child">
+        <input type="checkbox">
+        <label>Lorem ipsum dolor sit amet consectetuer adipiscing elit. sed diam nonummy nibh euismod tincidunt ut
+          laoreet</label>
+      </div>
+      <button class="submit" onclick="myFunction()">Register</button>
+    </div>
+
+  </div>
+  <script>
+    function myFunction() {
+      const check = document.getElementsByClassName("check");
+      for (let i = 0; i < check.length; i++) {
+        check[i].innerHTML = "";
+      }
+      let first_name = document.getElementById("first_name").value;
+      let last_name = document.getElementById("last_name").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      if (first_name == 0) {
+        document.getElementsByClassName("first_name")[0].innerHTML = "Bạn chưa nhập first name";
+      }
+      if (last_name == 0) {
+        document.getElementsByClassName("last_name")[0].innerHTML = "Bạn chưa nhập last_name";
+      }
+      if (email == 0) {
+        document.getElementsByClassName("email")[0].innerHTML = "Bạn chưa nhập email";
+      }
+      if (password == 0) {
+        document.getElementsByClassName("password")[0].innerHTML = "Bạn chưa nhập password";
+      }
+      else if (password.length < 8) {
+        document.getElementsByClassName("password")[0].innerHTML = "Bạn Nhập password không đủ ký tự";
+      }
+      else {
+        alert("Bạn Đã Đăng Nhập Thành Cộng");
+        window.location.reload(true);
+      }
+    }
+  </script>
+</body>
+
+</html>

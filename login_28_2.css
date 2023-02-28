@@ -1,0 +1,65 @@
+.form_Registration{
+  width: 25%;
+  height: auto;
+  background-color: #2A2A68;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+.input_Registration span{
+    color: red;
+    font-size: 15px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px ;
+}
+.form_Registration .header_Registration{
+  background-color: #242156;
+  border-radius: 5px;
+  padding: 2px;
+}
+.form_Registration .input_Registration{
+    width: 80%;
+    margin: auto;
+}
+.form_Registration .input_Registration input{
+  display: block;
+  margin-top: 15px;
+  border-radius: 5px;
+  width: 100%;
+  height: 35px;
+  
+}
+.check_box_Registration{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+.check_box_Registration .check_box_Registration_child{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+}
+.check_box_Registration .check_box_Registration_child label{
+    font-size: 10px;
+    width: 80%;
+}
+
+.form_Registration .input_Registration input::placeholder{
+  padding-left: 20px ;
+}
+.submit{
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 30%;
+  padding: 5px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}

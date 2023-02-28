@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  let n = prompt("Hãy Nhập Câu Hỏi Mà Bạn Muốn");
+  if (n == 1) {
+    for (let i = 1; i <= 100; i++) {
+      document.write(i + "<br>");
+    }
+  }
+  else if (n == 2) {
+    for (let i = 100; i >= 1; i--) {
+      document.write(i + "<br>");
+    }
+  }
+  else if (n == 3) {
+    for (let i = 1; i <= 100; i++) {
+      if (i % 3 == 0) {
+        document.write(i + "<br>");
+      }
+    }
+  }
+  else if (n == 4) {
+    for (let i = 99; i >= 1; i--) {
+      if (i % 7 == 0) {
+        document.write(i + "<br>");
+      }
+    }
+  }
+  else if (n == 5) {
+    let s = 0;
+    for (let i = 1; i <= 50; i++) {
+      s = s + i;
+    }
+    document.write(s);
+  }
+  else if (n == 6) {
+    let s = 0;
+    for (let i = 50; i >= 1; i--) {
+      s = s + i;
+    }
+    document.write(s);
+  }
+  else if (n == 7) {
+    let s = 0;
+    for (let i = 2; i <= 50; i++) {
+      if (i % 2 == 0) {
+        s = s + i;
+      }
+    }
+    document.write(s);
+  }
+  else if (n == 8) {
+    let s = 0;
+    for (let i = 5; i <= 100; i++) {
+      if (i % 5 == 0) {
+        s = s + i;
+      }
+    }
+    document.write(s);
+  }
+  else if (n == 9) {
+    let f = 1;
+    let n = prompt("Mời Bạn Nhập Giá Trị Phần Từ Mà Bạn Muốn Tính Ra Gia Thừa");
+    for (let i = 1; i <= n; i++) {
+      f = f * i;
+    }
+    document.write(f);
+  }
+  else if (n == 10) {
+    let n = prompt("Mời Bạn Nhập Giá Trị Để Kiểm Tra Số Nguyên Tố");
+    let temp = " ";
+    if (n > 1) {
+      for (let i = 2; i < n; i++) {
+        if (n % i == 0) {
+          temp += i + " ";
+        }
+      }
+      if (temp != " ") {
+        alert(n + " Đây Không Phải Là Số Nguyên Tố vì " + n + " chia hết cho : " + temp);
+      }
+      else {
+        alert(n + " Đây Là Số Nguyên Tố");
+      }
+    }
+    else {
+      alert("Giá Trị Bạn Nhập Không Lớn Hơn 1 Nên Nó Không Phải Là Số Nguyên Tố");
+    }
+  }
+  else if (n == 11) {
+    let n = prompt("Mời Bạn Nhập Giá Trị Để Kiểm Tra Số Hoàn Hảo Hay Không");
+    let s = 0
+    if (n > 1) {
+      for (let i = 1; i < n; i++) {
+        if (n % i == 0) {
+          s = s + i;
+        }
+      }
+      if (s == n) {
+        alert(n + " Đây Là Số Hoàn Hỏa");
+      }
+      else {
+        alert(n + " Đây Không Phải Số Hoàn Hảo");
+      }
+    }
+    else {
+      alert("Số Hoàn Hảo Chỉ Có Thể Là Số Nguyên Dương");
+    }
+  }
+  else if (n == 12) {
+    let a = 1;
+    let b = 0;
+    let s = 0;
+    for (let i = 1; i < 13; i++) {
+      s = a + b;
+      a = s;
+      b = a;
+      if (i < 10) {
+        document.write(s + "<br>");
+      }
+      else if (i == 12) {
+        document.write("Giá Trị Thứ 13 Của Dãy Fibonacci : " + s);
+      }
+    }
+  }
+  else if( n == 13){
+    let n = prompt("Mời Bạn Nhập 1 Số Nguyên Dương");
+    let temp = 0 ;
+    let i = 0 ;
+    let max = 0 ;
+    let s = 0 ; 
+    if( n > 0){
+      while( i < n){
+          x = n % 10 ;
+          n = parseInt(n/10);
+          temp ++;
+          s = s + x ;
+          if(max < x){
+            max = x;
+          }
+      }
+      
+      alert("N Có : " + temp + " chữ số");
+      alert("Tổng Của N :" + s);
+      alert("Số Lớn Nhất Trong Dãy N là : " + max);
+    }
+    else{
+      alert("Đây Không Phải Là 1 Số Nguyên Dương");
+    }
+  }
+</script>
+
+</html>
